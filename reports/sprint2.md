@@ -8,4 +8,3 @@ Design pattern: Factory.
 Each diagram was documented and uploaded to GitHub. 
 
 ### System Design & Diagram Creation 
-![[../docs/ClassDiagram.drawio.png]]
