@@ -25,3 +25,11 @@ class TaskList(TaskCreator, TaskDeleter, TaskViewer):
             if self.tasks[i].completed == completed:
                 res += f"{i}: {self.tasks[i]}\n"
         return res
+    
+    def update(self, id, name, desc, due_date):
+        self.tasks[id].name = name
+        self.tasks[id].description = desc
+        self.tasks[id].due_date = due_date
+
+    def complete(self, id, completed):
+        self.tasks[id].completed = completed
