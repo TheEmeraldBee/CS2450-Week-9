@@ -6,4 +6,4 @@ class Task:
         self.completed = completed
 
     def __repr__(self):
-        return f"{self.name}, {self.description}, {self.due_date}, {self.completed}"
+        return f"Task Name: {self.name}, Description: {self.description}, Due: {self.due_date}, Progress: {self.completed}"
