@@ -17,4 +17,11 @@ class TaskList(TaskCreator, TaskDeleter, TaskViewer):
         res = ""
         for i in range(len(self.tasks)):
             res += f"{i}: {self.tasks[i]}\n"
-            return res
+        return res
+
+    def filter_task(self, completed):
+        res = ""
+        for i in range(len(self.tasks)):
+            if self.tasks[i].completed == completed:
+                res += f"{i}: {self.tasks[i]}\n"
+        return res
