@@ -4,3 +4,6 @@ class Task:
         self.description = description
         self.due_date = due_date
         self.completed = completed
+
+    def __repr__(self):
+        return f"{self.name}, {self.description}, {self.due_date}, {self.completed}"

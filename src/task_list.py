@@ -1,9 +1,9 @@
 from task_creator import TaskCreator
 from task import Task
 from task_deleter import TaskDeleter
+from task_viewer import TaskViewer
 
-
-class TaskList(TaskCreator, TaskDeleter):
+class TaskList(TaskCreator, TaskDeleter, TaskViewer):
     def __init__(self):
         self.tasks = []
 
@@ -13,3 +13,8 @@ class TaskList(TaskCreator, TaskDeleter):
     def delete_task(self, id):
         del self.tasks[id]
 
+    def view_tasks(self):
+        res = ""
+        for i in range(len(self.tasks)):
+            res += f"{i}: {self.tasks[i]}\n"
+            return res
